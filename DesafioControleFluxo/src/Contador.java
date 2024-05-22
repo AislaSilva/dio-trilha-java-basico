@@ -27,8 +27,11 @@ public class Contador {
 	static void contagem(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
         //validar se parametroUm é MAIOR que parametroDois e lançar a exceção
         int contagem = parametroDois - parametroUm;
+		if (parametroUm > parametroDois){
+			throw new ParametrosInvalidosException();
+		}
         for(int i = 0; i < contagem; i++){
-			System.out.println(contagem);
+			System.out.println("Imprimindo numero " + i);
             
             //realizar o for para imprimir os números com base na variável contagem
         }			
